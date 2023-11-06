@@ -6,4 +6,5 @@ def names_function(fname,lname):
     return  f"Welcome {first} {last}"
 name1=input("Enter the first name \n")
 name2=input("Enter the last name\n")
-names_function(name1, name2)
+result= names_function(name1, name2)
+print(result)

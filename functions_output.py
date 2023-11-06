@@ -4,5 +4,6 @@ def names_function(fname,lname):
     first=fname.title()
     last=lname.title()
     return  f"Welcome {first} {last}"
-
-names_function("Samyukth", "Dharmarajan")
+name1=input("Enter the first name \n")
+name2=input("Enter the last name\n")
+names_function(name1, name2)

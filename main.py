@@ -1,5 +1,5 @@
 #calculator
-
+from art import logos
 #Addition
 def add(n1,n2):
     """A+B"""
@@ -29,9 +29,10 @@ result=0 #here the result is first initialised as 0, this is before all the calc
 def clear():
     print("\n"*110)
 def calculation1():
+    print(logos)
     global result
-    num1=int(input("ENTER THE FIRST NUMBER: "))
-    num2=int(input("ENTER THE SECOND NUMBER: "))
+    num1=float(input("ENTER THE FIRST NUMBER: "))
+    num2=float(input("ENTER THE SECOND NUMBER: "))
     print("WHICH OPERATION DO YOU WANT TO DO WITH THESE NUMBERS?\n")
     for i in operations:
         print(i)
@@ -45,14 +46,14 @@ calculation1()
 
 switch= True
 while switch==True:
-    continue_use=input("Do you want to continue or use a new calculator? Type 'y' to continue or 'n' for new calcuator, type 'e' to exit: ")
+    continue_use=input(f"Your result is {result}, do you want to continue or use a new calculator? Type 'y' to continue or 'n' for new calcuator, type 'e' to exit: ")
     if continue_use=='y':
         print(f"YOUR CURRENT RESULT IS {result}\n ")
         print("THESE ARE THE OPERATIONS\n")
         for i in operations:
             print(i)
         new_op=input("ENTER YOUR OPERATION HERE\n")
-        num3=int(input("ENTER THE NUMBER YOU WANT TO DO THIS OPERATION WITH\n"))
+        num3=float(input("ENTER THE NUMBER YOU WANT TO DO THIS OPERATION WITH\n"))
         calcuate=operations[new_op]
         result2=calcuate(result,num3)    
         print(f"{result} {new_op} {num3} = {result2}")
